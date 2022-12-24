@@ -7,21 +7,21 @@
 
 
 
-int[,] GetRandomMatrix(int m, int n)
+double[,] GetRandomMatrix(int m, int n)
 {
-    int[,] arr = new int[m, n];
+    double[,] arr = new double[m, n];
 
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            arr[i, j] = new Random().Next(-20, 30);
+            arr[i, j] = Math.Round(new Random().NextDouble() * (10 + 10) - 10, 1);
         }
     }
     return arr;
 }
 
-void PrintMatrix(int[,] matr)
+void PrintMatrix(double[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -33,6 +33,6 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-int[,] array = GetRandomMatrix(3, 4);
+double[,] array = GetRandomMatrix(3, 4);
 
 PrintMatrix(array);
