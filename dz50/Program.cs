@@ -40,7 +40,7 @@ void PrintMatrix(int[,] matr)
 
 void FindElement(int[,] matr, int indi, int indj)
 {
-    if (indi <= matr.GetLength(0) - 1 && indj <= matr.GetLength(1) - 1)
+    if (indi <= matr.GetLength(0) - 1 && indj <= matr.GetLength(1) - 1 && indi > 0 && indj > 0)
         Console.WriteLine(matr[indi, indj]);
     else Console.WriteLine("Такого элемента не существует");
 }
